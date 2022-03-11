@@ -1,0 +1,48 @@
+{% set name = "antiSMASH" %}
+{% set version = "6.0.1" %}
+{% set sha256 = "9660ab37f220085703e3864a2bcb7ec384bb7c256bfa360746166bcc3369042a" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+build:
+  number: 0
+  noarch: python
+
+source:
+  url: https://dl.secondarymetabolites.org/releases/{{ version }}/download_antismash_databases
+  sha256: {{ sha256 }}
+
+requirements:
+  host:
+    - python >=3.7
+  run:
+    - python >=3.7
+
+test:
+  commands:
+    - ls /data/databases/pfam
+
+about:
+  home: https://docs.antismash.secondarymetabolites.org/intro/
+  license: AGPL-3.0
+  license_family: AGPL
+  license_file: LICENSE.txt
+  summary: antiSMASH - the antibiotics and Secondary Metabolite Analysis SHell
+  description: |
+        antiSMASH allows the rapid genome-wide identification,
+        annotation and analysis of secondary metabolite biosynthesis gene clusters.
+  dev_url: https://github.com/antismash/antismash
+  doc_url: https://docs.antismash.secondarymetabolites.org
+
+extra:
+  identifiers:
+    - biotools:antismash
+    - doi:10.1093/nar/gkr466
+    - doi:10.1093/nar/gkt449
+    - doi:10.1093/nar/gkv437
+    - doi:10.1093/nar/gkx319
+    - doi:10.1093/nar/gkz310
+    - doi:10.1093/nar/gkab335
+    - usegalaxy-eu:antismash
