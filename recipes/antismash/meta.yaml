@@ -1,6 +1,6 @@
 {% set name = "antiSMASH" %}
-{% set version = "6.1.1" %}
-{% set sha256 = "38c9fa8d34dea2552d3b21e3cb2ca293864f2f53d381764de9dd3d5f0b40139e" %}
+{% set version = "7.0.0" %}
+{% set sha256 = "590a37013bc588594583ee868b09eb498fc5b3bb21297e11959000e88c532199" %}
 
 package:
   name: {{ name|lower }}
@@ -40,7 +40,6 @@ requirements:
     - hmmer2
     - hmmer ==3.1b2
     - meme <=4.11.2
-    - muscle 3.8.*
     - blast
     - prodigal
 
@@ -72,4 +71,5 @@ extra:
     - doi:10.1093/nar/gkx319
     - doi:10.1093/nar/gkz310
     - doi:10.1093/nar/gkab335
+    - doi:10.1093/nar/gkad344
     - usegalaxy-eu:antismash
